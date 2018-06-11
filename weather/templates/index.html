@@ -1,5 +1,13 @@
-<form action="/weather/" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="/weather/" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Go" />
+    </form>
+  </body>
+</html>

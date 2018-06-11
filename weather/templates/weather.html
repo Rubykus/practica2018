@@ -1,3 +1,38 @@
+<style>
+  td, th {
+    width: auto;
+    text-align: center;
+    padding: 5;
+  }
+  table {
+    width: 100%;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
 <div>
-  City {{ city }}
+  <h3>From - {{from}}</h3>
+  <h3>City - {{city|title}}</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Temperature</th>
+        <th>Pressure</th>
+        <th>Wind speed</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for w in weathers %}
+        <tr>
+          <td>{{w.date}}</td>
+          <td>{{w.temp}}</td>
+          <td>{{w.pressure}}</td>
+          <td>{{w.wind_speed}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>

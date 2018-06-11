@@ -123,3 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Openweathermap api key
+APPID = '3b4ba4600fb10b2398df3e9b7aa11595'
